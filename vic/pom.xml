@@ -3,4 +3,65 @@
   <groupId>com.ank</groupId>
   <artifactId>vic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+	<dependency>
+	    <groupId>org.springframework.integration</groupId>
+	    <artifactId>spring-integration-core</artifactId>
+	    <version>4.1.1.RELEASE</version>
+	</dependency>
+	
+  </dependencies>
+   <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+	  <plugin>
+	          <groupId>org.apache.maven.plugins</groupId>
+	          <artifactId>maven-shade-plugin</artifactId>
+	          <version>2.1</version>
+	          <executions>
+	            <execution>
+	              <phase>package</phase>
+	              <goals><goal>shade</goal></goals>
+	              <configuration>
+	              <finalName>vic</finalName>
+	              <shadedArtifactAttached>false</shadedArtifactAttached>
+	                <transformers>
+	                  <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	                    <mainClass>vic.Launch</mainClass>
+	                  </transformer>
+	                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	                    <resource>META-INF/spring.handlers</resource>
+	                  </transformer>
+	                  <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	                    <resource>META-INF/spring.schemas</resource>
+	                  </transformer>
+	                </transformers>
+	              </configuration>
+	            </execution>
+	          </executions>
+        	</plugin>
+     </plugins>
+      <resources>
+		  <resource>
+			 	<directory>src\main\java</directory>
+				<includes>
+				  	<include>**/*.xml</include>
+				</includes>
+		  </resource>
+		  <resource>
+			 	<directory>src\main\resources</directory>
+				<includes>
+				  	<include>**/*.properties</include>
+				</includes>
+		  </resource>
+	  </resources>
+    </build>
 </project>
