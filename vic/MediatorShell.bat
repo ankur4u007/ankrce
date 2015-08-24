@@ -1,0 +1,1 @@
+cmd.exe /C java -jar H:/work/git_repo/ankrce/vic/target/classes/

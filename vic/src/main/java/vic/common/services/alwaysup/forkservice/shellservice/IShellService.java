@@ -1,4 +1,4 @@
-package vic.common.services.forkservice.shellservice;
+package vic.common.services.alwaysup.forkservice.shellservice;
 
 public interface IShellService {
 

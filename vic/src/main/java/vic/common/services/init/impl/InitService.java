@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import vic.common.bo.InstanceBO;
+import vic.common.services.alwaysup.forkservice.IForkService;
 import vic.common.services.alwaysup.localping.impl.LocalPingService;
 import vic.common.services.alwaysup.registerservice.IRegisterService;
-import vic.common.services.forkservice.IForkService;
 import vic.common.services.init.IInitService;
 import vic.common.services.slave.ISlaveService;
 

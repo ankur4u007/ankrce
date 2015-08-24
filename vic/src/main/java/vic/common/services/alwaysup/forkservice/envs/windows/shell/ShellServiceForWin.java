@@ -1,9 +1,9 @@
-package vic.common.services.forkservice.envs.windows.shell;
+package vic.common.services.alwaysup.forkservice.envs.windows.shell;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-import vic.common.services.forkservice.shellservice.IShellService;
+import vic.common.services.alwaysup.forkservice.shellservice.IShellService;
 
 @Component
 @Profile("windows")

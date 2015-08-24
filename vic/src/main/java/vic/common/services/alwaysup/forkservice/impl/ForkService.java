@@ -1,4 +1,4 @@
-package vic.common.services.forkservice.impl;
+package vic.common.services.alwaysup.forkservice.impl;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 
 import vic.Launch;
 import vic.common.bo.InstanceBO;
+import vic.common.services.alwaysup.forkservice.IForkService;
+import vic.common.services.alwaysup.forkservice.shellservice.IShellService;
 import vic.common.services.alwaysup.registerservice.IRegisterService;
-import vic.common.services.forkservice.IForkService;
-import vic.common.services.forkservice.shellservice.IShellService;
 
 @Component
 public class ForkService implements IForkService, Runnable {
